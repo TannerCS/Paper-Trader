@@ -57,7 +57,7 @@ jobs:
         run: npm run test -- --run
 
       - name: Build and upload release assets
-        uses: tauri-apps/tauri-action@v1
+        uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -92,7 +92,7 @@ jobs:
         run: npm run test -- --run
 
       - name: Build and upload portable exe
-        uses: tauri-apps/tauri-action@v1
+        uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -102,4 +102,4 @@ jobs:
           prerelease: ${{ contains(github.ref_name, '-') }}
           args: "--no-bundle"
           uploadPlainBinary: true
-          releaseAssetNamePattern: "Paper-Trader_[version]_[platform]_[arch]_p[ext]"
+          releaseAssetNamePattern: "Paper-Trader_[version]_[platform]_[arch]_portable[ext]"

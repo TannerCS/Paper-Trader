@@ -1,6 +1,6 @@
 [package]
 name = "paper-trader"
-version = "0.1.0"
+version = "0.1.1"
 description = "A desktop crypto paper trading terminal"
 authors = ["TannerCS"]
 edition = "2021"
