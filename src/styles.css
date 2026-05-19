@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  --color-app: rgb(var(--pt-app));
+  --color-panel: rgb(var(--pt-panel));
+  --color-panel-muted: rgb(var(--pt-panel-muted));
+  --color-border: rgb(var(--pt-border));
+  --color-text: rgb(var(--pt-text));
+  --color-text-muted: rgb(var(--pt-text-muted));
+  --color-accent: rgb(var(--pt-accent));
+  --color-accent-soft: rgb(var(--pt-accent-soft));
+  --color-positive: rgb(var(--pt-positive));
+  --color-negative: rgb(var(--pt-negative));
+  --radius-panel: var(--radius-panel);
+}
+
+:root {
+  color-scheme: light;
+  --pt-app: 246 247 249;
+  --pt-panel: 255 255 255;
+  --pt-panel-muted: 250 251 252;
+  --pt-border: 229 232 237;
+  --pt-text: 24 27 32;
+  --pt-text-muted: 111 119 132;
+  --pt-accent: 0 102 204;
+  --pt-accent-soft: 226 240 255;
+  --pt-positive: 21 163 97;
+  --pt-negative: 220 53 69;
+  --radius-panel: 8px;
+  --shadow-panel: 0 12px 36px rgb(31 35 40 / 0.045);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="cupertino-dark"] {
+  color-scheme: dark;
+  --pt-app: 17 19 23;
+  --pt-panel: 25 28 33;
+  --pt-panel-muted: 32 36 42;
+  --pt-border: 50 56 66;
+  --pt-text: 242 244 248;
+  --pt-text-muted: 158 166 178;
+  --pt-accent: 64 156 255;
+  --pt-accent-soft: 20 54 91;
+  --pt-positive: 48 209 88;
+  --pt-negative: 255 69 58;
+  --shadow-panel: 0 12px 36px rgb(0 0 0 / 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: rgb(var(--pt-app));
+  color: rgb(var(--pt-text));
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background: rgb(var(--color-text-muted) / 0.28);
+  background-clip: content-box;
+}
+
+.panel-shadow {
+  box-shadow: var(--shadow-panel);
+}
+
+.kline-chart-surface {
+  contain: paint;
+  overflow: hidden;
+  position: relative;
+}
+
+.kline-chart-surface > div {
+  max-width: 100%;
+}

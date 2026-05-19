@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+coverage/
+.nyc_output/
+src-tauri/target/
+src-tauri/gen/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+vite.err.log
+vite.out.log
+
+# Local env/config
+.env
+.env.*
+!.env.example
+*.local
+
+# Runtime data
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+paper-trader.db
+*.har
+
+# Packaged installers / binaries
+*.exe
+*.msi
+*.msix
+*.appx
+*.dmg
+*.deb
+*.rpm
+*.AppImage
+*.zip
+*.7z
+*.tar.gz
+
+# OS/editor files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
